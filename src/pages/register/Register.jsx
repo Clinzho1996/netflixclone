@@ -1,10 +1,12 @@
 import { useRef } from "react";
 import { useState } from "react";
 import "./register.scss";
+import { Link, useNavigation, useHistory } from "react-router-dom";
 
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigation();
 
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -14,6 +16,7 @@ export default function Register() {
   };
   const handleFinish = () => {
     setPassword(passwordRef.current.value);
+    navigate(2);
   };
   return (
     <div className="register">
@@ -24,7 +27,9 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton">Sign In</button>
+          <button className="loginButton">
+            <Link to="/">Sign In </Link>
+          </button>
         </div>
       </div>
       <div className="container">

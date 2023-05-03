@@ -4,6 +4,9 @@ import {
   Add,
   ThumbUpAltOutlined,
   ThumbDownOutlined,
+  FiberManualRecord,
+  PlayCircleFilled,
+  KeyboardArrowDownOutlined,
 } from "@material-ui/icons";
 import { useState } from "react";
 
@@ -26,19 +29,27 @@ export default function ListItem({ index }) {
         <>
           <video src={trailer} autoPlay={true} loop />
           <div className="itemInfo">
-            <div className="icons">
-              <PlayArrow className="icon" />
-              <Add className="icon" />
-              <ThumbUpAltOutlined className="icon" />
-              <ThumbDownOutlined className="icon" />
+            <div className="iconDetails">
+              <div className="icons">
+                <PlayCircleFilled className="play" />
+                <Add className="icon" />
+                <ThumbUpAltOutlined className="icon" />
+                <ThumbDownOutlined className="icon" />
+              </div>
+              <div className="icons">
+                <KeyboardArrowDownOutlined className="icon" />
+              </div>
             </div>
             <div className="itemInfoTop">
-              <span>1 hour 14 mins</span>
+              <span style={{ color: "green" }}>97% Match</span>
               <span className="limit">+16</span>
               <span>1999</span>
+              <span className="limit hd">HD</span>
             </div>
-            <div className="desc">Lorem ipsum dolor, sit amet consectetur</div>
-            <div className="genre">Action</div>
+            <div className="genre">
+              Action <FiberManualRecord className="dot" /> Movie
+              <FiberManualRecord className="dot" /> Triller
+            </div>
           </div>
         </>
       )}

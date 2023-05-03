@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.scss";
-import { AcUnit } from "@material-ui/icons";
 import Navbar from "../../components/navbar/Navbar";
 import Featured from "../../components/navbar/featured/Featured";
 import List from "../../components/list/List";

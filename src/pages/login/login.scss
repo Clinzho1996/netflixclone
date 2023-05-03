@@ -1,4 +1,4 @@
-.register {
+.login {
   width: 100vw;
   height: 100vh;
   background: linear-gradient(
@@ -9,7 +9,6 @@
     url("https://mebincdn.themebin.com/1664271579476.jpg");
   background-size: cover;
   position: relative;
-  text-decoration: none;
 
   .top {
     .wrapper {
@@ -20,18 +19,6 @@
 
       .logo {
         height: 40px;
-      }
-
-      .loginButton {
-        background-color: red;
-        border: none;
-        color: white;
-        border-radius: 5px;
-        padding: 5px 15px;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        z-index: 200;
       }
     }
   }
@@ -48,43 +35,44 @@
     justify-content: center;
     color: white;
 
-    h1 {
-      font-size: 50px;
-    }
-
-    h2 {
-      margin: 20px;
-    }
-
-    p {
-      font-size: 20px;
-    }
-
-    .input {
-      width: 50%;
-      background-color: white;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 20px;
-      height: 50px;
+    form {
+      width: 300px;
+      height: 300px;
+      padding: 30px;
       border-radius: 5px;
+      background-color: var(--main-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
 
       input {
-        flex: 9;
-        height: 100%;
-        border: none;
-        padding: 0 10px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: gray;
+        color: white;
+        padding-left: 10px;
+
+        &::placeholder {
+          color: lightgray;
+        }
       }
 
-      .registerButton {
-        flex: 3;
-        height: 100%;
+      button {
+        height: 40px;
+        border-radius: 5px;
         background-color: red;
-        border: none;
         color: white;
-        font-size: 22px;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
         cursor: pointer;
+      }
+
+      span {
+        color: lightgray;
+        b {
+          color: white;
+        }
       }
     }
   }
