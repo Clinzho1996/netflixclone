@@ -1,7 +1,22 @@
 import { Link } from "react-router-dom";
 import "./login.scss";
+import { useState } from "react";
+import { Refresh } from "@material-ui/icons";
 
 export default function Login() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleClick = () => {
+    setIsLoading(true);
+    // Do login logic here
+    // After login is complete, set isLoading back to false
+
+    setTimeout(() => {
+      setIsLoading(false);
+      window.location.href = "/browse";
+    }, 3000);
+  };
+
   return (
     <div className="login">
       <div className="top">
@@ -18,13 +33,17 @@ export default function Login() {
           <h1>Sign In</h1>
           <input type="email" placeholder="Email or phone number" />
           <input type="password" placeholder="Password" />
-          <Link to="/browse">
-            <button className="loginButton">Sign In</button>
-          </Link>
+          <button
+            className="loginButton"
+            onClick={handleClick}
+            disabled={isLoading}
+          >
+            {isLoading ? "Loading ..." : "Sign In"}
+          </button>
           <span>
-            New to Netflix?{" "}
+            New to Netflix?
             <Link to="/register">
-              <b>Sign up now.</b>
+              <b> Sign up now.</b>
             </Link>
           </span>
           <small>

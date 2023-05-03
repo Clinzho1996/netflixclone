@@ -1,6 +1,7 @@
 import React from "react";
 import "./featured.scss";
 import { InfoOutlined, PlayArrow } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 const Featured = ({ type }) => {
   return (
@@ -24,7 +25,7 @@ const Featured = ({ type }) => {
         </div>
       )}
       <img
-        src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2021/11/15/16370114482906.jpg"
+        src="https://variety.com/wp-content/uploads/2015/02/spider-mannew.jpeg?w=681&h=383&crop=1"
         alt=""
       />
 
@@ -41,7 +42,10 @@ const Featured = ({ type }) => {
         </span>
         <div className="buttons">
           <button className="play">
-            <PlayArrow /> <span>Play</span>
+            <PlayArrow />{" "}
+            <span>
+              <Link to="/watch">Play</Link>
+            </span>
           </button>
           <button className="more">
             <InfoOutlined />

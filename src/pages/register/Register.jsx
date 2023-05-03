@@ -16,7 +16,7 @@ export default function Register() {
   };
   const handleFinish = () => {
     setPassword(passwordRef.current.value);
-    navigate(2);
+    navigate("/");
   };
   return (
     <div className="register">

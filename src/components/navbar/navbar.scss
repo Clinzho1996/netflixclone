@@ -57,6 +57,11 @@
         span {
           cursor: pointer;
           padding: 10px;
+          color: #fff;
+        }
+
+        span a:visited {
+          color: #fff;
         }
 
         &:hover {
