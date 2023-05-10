@@ -8,12 +8,12 @@ import {
   PlayCircleFilled,
   KeyboardArrowDownOutlined,
 } from "@material-ui/icons";
-import "./listItem.scss";
+import "./Top.scss";
 
 const API_KEY = "aa00e3d2a883067d5c64c3b57d3d99f7";
-const BASE_URL = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}&language=en-US&page=1`;
+const BASE_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
 
-export default function Trending({ index }) {
+export default function Upcoming({ index }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState(null);
   const trailer =
@@ -37,18 +37,18 @@ export default function Trending({ index }) {
 
   return (
     <div
-      className="listItem"
-      style={{
-        left: isHovered && index * 225 - 50 + index * 2.5,
-        marginBottom: 50,
-      }}
+      className="TopItem"
+      style={{ left: isHovered && index * 225 - 50 + index * 2.5 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img
-        src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
-        alt=""
-      />
+      <div className="index">
+        <h1>{index + 1}</h1>
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
+          alt=""
+        />
+      </div>
       {isHovered && (
         <>
           <video src={movie?.trailer} autoPlay loop />

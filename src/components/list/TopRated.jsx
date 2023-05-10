@@ -4,18 +4,20 @@ import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
 } from "@material-ui/icons";
-import ListItem from "../listItem/ListItem";
+import Top from "../listItem/Top";
 
-const List = () => {
+const TopRated = () => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [isMoved, setIsMoved] = useState(false);
   const listRef = useRef();
+
   const handleClick = (direction) => {
     setIsMoved(true);
     let distance = listRef.current.getBoundingClientRect().x - 50;
+
     if (direction === "left" && slideNumber > 0) {
       setSlideNumber(slideNumber - 1);
-      listRef.current.style.transform = ` translateX(${230 + distance}px)`;
+      listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
 
     if (direction === "right" && slideNumber < 14) {
@@ -24,9 +26,10 @@ const List = () => {
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
     }
   };
+
   return (
-    <div className="list top-rated">
-      <span className="listTitle">Top Rated Movies</span>
+    <div className="list">
+      <span className="listTitle">Top 10 Movies in Dev-Clinton's Netflix</span>
       <div className="wrapper">
         <ArrowBackIosOutlined
           className="sliderArrow left"
@@ -35,22 +38,23 @@ const List = () => {
         />
 
         <div className="container" ref={listRef}>
-          <ListItem index={0} />
-          <ListItem index={1} />
-          <ListItem index={2} />
-          <ListItem index={3} />
-          <ListItem index={4} />
-          <ListItem index={5} />
-          <ListItem index={6} />
-          <ListItem index={7} />
-          <ListItem index={8} />
-          <ListItem index={9} />
-          <ListItem index={10} />
-          <ListItem index={11} />
-          <ListItem index={12} />
-          <ListItem index={13} />
-          <ListItem index={14} />
+          <Top index={0} />
+          <Top index={1} />
+          <Top index={2} />
+          <Top index={3} />
+          <Top index={4} />
+          <Top index={5} />
+          <Top index={6} />
+          <Top index={7} />
+          <Top index={8} />
+          <Top index={9} />
+          <Top index={10} />
+          <Top index={11} />
+          <Top index={12} />
+          <Top index={13} />
+          <Top index={14} />
         </div>
+
         <ArrowForwardIosOutlined
           className={`sliderArrow right ${
             slideNumber === 14 ? "disabled" : ""
@@ -62,4 +66,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default TopRated;

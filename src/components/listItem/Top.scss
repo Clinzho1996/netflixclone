@@ -1,6 +1,6 @@
-.listItem {
+.TopItem {
   width: 225px;
-  height: 120px;
+  height: 200px;
   background-color: var(--main-color);
   margin-right: 5px;
   overflow: hidden;
@@ -10,9 +10,23 @@
   .index {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    h1 {
+      font-size: 200px;
+      font-weight: 900;
+      margin-top: 0px;
+      margin-right: -40px;
+      font-family: "Roboto", sans-serif;
+      color: #000000;
+      -webkit-text-fill-color: #000000; /* Will override color (regardless of order) */
+      -webkit-text-stroke-width: 6px;
+      -webkit-text-stroke-color: gray;
+    }
   }
   img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
   }

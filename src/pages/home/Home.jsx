@@ -6,12 +6,18 @@ import List from "../../components/list/List";
 import UpcomingMovies from "../../components/list/UpcomingMovies";
 import TrendingList from "../../components/list/TrendingList";
 import NowList from "../../components/list/NowList";
+import TopRated from "../../components/list/TopRated";
 
 const Home = () => {
   return (
     <div className="home">
       <Navbar />
       <Featured />
+      <NowList />
+      <List />
+      <UpcomingMovies />
+      <TopRated />
+      <TrendingList />
       <NowList />
       <List />
       <UpcomingMovies />
