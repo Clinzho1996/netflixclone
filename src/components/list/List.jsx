@@ -24,8 +24,8 @@ const List = () => {
     }
   };
   return (
-    <div className="list">
-      <span className="listTitle">Continue to watch</span>
+    <div className="list top-rated">
+      <span className="listTitle">Top Rated Movies</span>
       <div className="wrapper">
         <ArrowBackIosOutlined
           className="sliderArrow left"

@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./login.scss";
 import { useState } from "react";
-import { Refresh } from "@material-ui/icons";
 
 export default function Login() {
   const [isLoading, setIsLoading] = useState(false);

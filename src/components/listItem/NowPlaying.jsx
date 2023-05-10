@@ -11,9 +11,9 @@ import {
 import "./listItem.scss";
 
 const API_KEY = "aa00e3d2a883067d5c64c3b57d3d99f7";
-const BASE_URL = `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}&language=en-US&page=1`;
+const BASE_URL = `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`;
 
-export default function ListItem({ index }) {
+export default function NowPlaying({ index }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState(null);
   const trailer =
