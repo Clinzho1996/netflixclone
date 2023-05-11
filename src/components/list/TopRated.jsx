@@ -20,7 +20,7 @@ const TopRated = () => {
       listRef.current.style.transform = `translateX(${230 + distance}px)`;
     }
 
-    if (direction === "right" && slideNumber < 14) {
+    if (direction === "right" && slideNumber < 10) {
       // Updated condition to check against last index
       setSlideNumber(slideNumber + 1);
       listRef.current.style.transform = `translateX(${-230 + distance}px)`;
@@ -48,16 +48,11 @@ const TopRated = () => {
           <Top index={7} />
           <Top index={8} />
           <Top index={9} />
-          <Top index={10} />
-          <Top index={11} />
-          <Top index={12} />
-          <Top index={13} />
-          <Top index={14} />
         </div>
 
         <ArrowForwardIosOutlined
           className={`sliderArrow right ${
-            slideNumber === 14 ? "disabled" : ""
+            slideNumber === 10 ? "disabled" : ""
           }`}
           onClick={() => handleClick("right")}
         />
